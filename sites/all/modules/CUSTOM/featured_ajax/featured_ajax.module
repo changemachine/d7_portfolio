@@ -1,15 +1,15 @@
 <?php
-function mymodule_menu() {
+function featured_ajax_menu() {
     $items['path-to-ajax/%/%'] = array(
             'access arguments' => array('access content'),
-            'page callback' => 'mymodule_ajax_callback',
+            'page callback' => 'featured_ajax_ajax_callback',
             'page arguments' => array(1,2),
             'type' => MENU_CALLBACK,
     );
     return $items;
 }
 
-function mymodule_ajax_callback($js, $node_id) {
+function featured_ajax_ajax_callback($js, $node_id) {
   $node = node_load($node_id);
 
   if ($js == 'nojs') {
@@ -22,7 +22,7 @@ function mymodule_ajax_callback($js, $node_id) {
 
   // Prepare ajax command to insert the node's HTML into our div under News - the wrapper.
   $commands = array();
-  $commands[] = ajax_command_html('#mymodule-ajax-wrapper', $html);
+  $commands[] = ajax_command_html('#featured_ajax-ajax-wrapper', $html);
 
   // Render commands into JSON and print them to the browser.
   print ajax_render($commands);
