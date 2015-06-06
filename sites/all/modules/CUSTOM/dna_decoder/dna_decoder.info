@@ -1,0 +1,5 @@
+name = Featured AJAX
+description = Uses ajax to swap displayed items, pulled from the "News View" view created for this purpose.
+package = My Custom Modules
+core = 7.x
+files[] = featured_ajax.module

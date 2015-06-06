@@ -1,0 +1,14 @@
+<?php
+function dna_decoder_menu() {
+    $items['dna'] = array(
+            'access arguments' => array('access content'),
+            'page callback' => 'dna_decoder_callback',
+            // 'page arguments' => array(1,2),
+            'type' => MENU_NORMAL_ITEM,
+    );
+    return $items;
+}
+
+function dna_decoder_callback() {
+
+}
